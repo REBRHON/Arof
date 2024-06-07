@@ -4,7 +4,7 @@ from email.mime.text import MIMEText
 import telebot, smtplib, json, os, time
 
 MAX_EMAILS = 8 #عدد الايميلات حط تحت 10
-TOKEN = "7011673585:AAFDXkTnucjlRhy4tWsSvNXELBzvMbkL1PU"
+TOKEN = "7011673585:AAE1wFGIBLgs21RO-i2KNyYA1yw8VAlqhj8"
 bot = telebot.TeleBot(TOKEN)
 
 def load_users():
@@ -41,7 +41,7 @@ def send_welcome(message):
         markup.add(add_email_button, send_email_button)
         markup.add(view_emails_button)
         bot.send_message(message.chat.id, "أهلاً بك في البوت!\n\nلاضافة ايميل اضغط اضف ايميل\nلإرسال رسالة اضغط ارسال رسالة", reply_markup=markup)
-    else:bot.send_message(message.chat.id, "انت ما مشترك راسل المطور علمود يفعلك \N المطور : @vipvkv ")
+    else:bot.send_message(message.chat.id, "انت ما مشترك راسل المطور علمود يفعلك \n\n المطور : @vipvkv")
 
 @bot.callback_query_handler(func=lambda call: call.data == "add_email")
 def handle_add_email(call):

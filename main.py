@@ -41,7 +41,7 @@ def send_welcome(message):
         markup.add(add_email_button, send_email_button)
         markup.add(view_emails_button)
         bot.send_message(message.chat.id, "أهلاً بك في البوت!\n\nلاضافة ايميل اضغط اضف ايميل\nلإرسال رسالة اضغط ارسال رسالة", reply_markup=markup)
-    else:bot.send_message(message.chat.id, "ما افعل لا شخص لا تجي خاص")
+    else:bot.send_message(message.chat.id, "انت ما مشترك راسل المطور علمود يفعلك \N المطور : @vipvkv ")
 
 @bot.callback_query_handler(func=lambda call: call.data == "add_email")
 def handle_add_email(call):
